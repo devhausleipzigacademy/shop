@@ -1,0 +1,135 @@
+/*=================================================================
+    # Global
+==================================================================*/
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --text-color: #777b85;
+  --fs-h1: 4rem;
+  --primary-color: #5046e5;
+}
+
+html {
+  font-family: "Inter", sans-serif;
+  font-size: 100%;
+  font-weight: 400;
+}
+
+h1 {
+  font-size: var(--fs-h1);
+  font-weight: 700;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/*=================================================================
+    # MainHeader
+==================================================================*/
+
+.main-nav {
+  display: flex;
+  padding: 1.56rem 3rem;
+  justify-content: space-between;
+  position: relative;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+
+.main-nav ul {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.main-nav a {
+  color: var(--text-color);
+  font-size: 1.25rem;
+  font-weight: 700;
+}
+
+.cart {
+  display: flex;
+  align-items: flex-end;
+  gap: 0.75rem;
+}
+
+.navigation-items {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.mobile-menu {
+  display: none;
+  height: 24px;
+  width: 24px;
+}
+
+/*=================================================================
+    # Hero
+==================================================================*/
+.hero {
+  background-image: url("/img/background.jpg");
+  min-height: calc(100vh - 6.25rem);
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-content {
+  color: white;
+  text-align: center;
+  max-width: 57rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  margin: 0 1.5rem;
+}
+
+.hero-content p {
+  font-size: 1.5rem;
+}
+
+.hero-content a {
+  background-color: var(--primary-color);
+  padding: 1rem clamp(1.5rem, 10vw, 8rem);
+  display: inline-block;
+  font-size: 1.5rem;
+  border-radius: 0.5rem;
+}
+
+/*=================================================================
+    # Cards Wrapper
+==================================================================*/
+
+/*=================================================================
+    # Media Queries
+==================================================================*/
+
+@media screen and (max-width: 1000px) {
+  .socials {
+    display: none !important;
+  }
+  .mobile-menu {
+    display: block !important;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .navigation-items {
+    display: none !important;
+  }
+}
