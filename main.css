@@ -42,6 +42,22 @@ a {
   color: inherit;
 }
 
+button {
+  border: none;
+  background-color: var(--primary-color);
+  color: white;
+  padding: 1rem 2.5rem;
+  border-radius: 0.5rem;
+  font-size: 1.5rem;
+}
+
+input {
+  padding: 1.25rem 1rem;
+  min-width: 250px;
+  border-radius: 8px;
+  border: 1px solid var(--text-color);
+}
+
 /*=================================================================
     # MainHeader
 ==================================================================*/
@@ -205,6 +221,42 @@ a {
 }
 
 /*=================================================================
+    # Footer
+==================================================================*/
+footer {
+  display: flex;
+  padding: 7.5rem 3rem;
+  background-color: #f9fafc;
+  justify-content: space-between;
+}
+
+.footer-nav {
+  display: flex;
+  gap: 6.25rem;
+}
+
+.footer-nav ul {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin-top: 2rem;
+  color: var(--text-color);
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.form-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+/*=================================================================
     # Media Queries
 ==================================================================*/
 
@@ -223,5 +275,26 @@ a {
   }
   .cards-wrapper__heading h2 {
     margin-bottom: 1rem;
+  }
+  .footer-nav {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+  .footer-nav ul {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  footer {
+    flex-direction: column;
+    gap: 2.5rem;
+  }
+}
+
+@media screen {
+  .sr-only {
+    display: none;
   }
 }
