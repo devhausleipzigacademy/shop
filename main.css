@@ -10,7 +10,6 @@
 
 :root {
   --text-color: #777b85;
-  --fs-h1: 4rem;
   --primary-color: #5046e5;
 }
 
@@ -21,8 +20,17 @@ html {
 }
 
 h1 {
-  font-size: var(--fs-h1);
+  font-size: clamp(2.5rem, 10vw, 12rem);
   font-weight: 700;
+}
+
+h2 {
+  font-size: 2.25rem;
+  font-weight: 700;
+}
+
+h3 {
+  font-size: 1.25rem;
 }
 
 ul {
@@ -92,7 +100,7 @@ a {
 .hero-content {
   color: white;
   text-align: center;
-  max-width: 57rem;
+  max-width: 105rem;
   display: flex;
   flex-direction: column;
   gap: 2rem;
@@ -101,6 +109,8 @@ a {
 
 .hero-content p {
   font-size: 1.5rem;
+  max-width: 57rem;
+  margin: auto;
 }
 
 .hero-content a {
@@ -114,6 +124,85 @@ a {
 /*=================================================================
     # Cards Wrapper
 ==================================================================*/
+.cards-wrapper {
+  padding: 7.5rem 3rem;
+  max-width: 1600px;
+  margin: auto;
+}
+
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 3rem;
+  justify-content: center;
+}
+
+.cards-wrapper__heading {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 3.5rem;
+  flex-wrap: wrap;
+}
+
+.cards-wrapper__heading a {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--primary-color);
+  font-weight: 500;
+  font-size: 1.5rem;
+}
+
+.card .card-content {
+  padding: 2.5rem 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
+.card-content span {
+  color: var(--text-color);
+}
+
+.card-content span:last-child {
+  color: black;
+  font-weight: 700;
+}
+
+/*=================================================================
+    # About Section
+==================================================================*/
+.about {
+  background-color: #f9fafc;
+  border-bottom: 1px solid rgba(119, 123, 133, 0.4);
+  border-top: 1px solid rgba(119, 123, 133, 0.4);
+  padding: 7.5rem 3rem;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 3rem;
+}
+
+.about .card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.about .card-content {
+  text-align: center;
+  max-width: 275px;
+}
+
+.card-content p {
+  margin-top: 0.75rem;
+  color: var(--text-color);
+}
+
+.about .card img {
+  width: 6.5rem;
+  height: 6.5rem;
+}
 
 /*=================================================================
     # Media Queries
@@ -131,5 +220,8 @@ a {
 @media screen and (max-width: 700px) {
   .navigation-items {
     display: none !important;
+  }
+  .cards-wrapper__heading h2 {
+    margin-bottom: 1rem;
   }
 }
